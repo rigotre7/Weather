@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.rigot.weather.Details">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/locationtime" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/locationtime"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/temp"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/conditionText"
+        android:textAlignment="center"
+        android:textSize="14sp" />
+
+    <TextView
+        android:text="Min Temperature: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/maxTempLabel"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/maxTempLabel"
+        android:layout_alignStart="@+id/maxTempLabel"
+        android:id="@+id/minTempLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/maxTempLabel"
+        android:layout_toRightOf="@+id/conditionText"
+        android:layout_toEndOf="@+id/conditionText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/maxtemp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/minTempLabel"
+        android:layout_alignLeft="@+id/maxtemp"
+        android:layout_alignStart="@+id/maxtemp"
+        android:id="@+id/mintemp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:text="Humidity: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/humidityLabel"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/feelsLikeLabel"
+        android:layout_alignLeft="@+id/feelsLikeLabel"
+        android:layout_alignStart="@+id/feelsLikeLabel" />
+
+    <TextView
+        android:text="Dew Point: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/humidityLabel"
+        android:layout_alignLeft="@+id/humidityLabel"
+        android:layout_alignStart="@+id/humidityLabel"
+        android:id="@+id/dewPointLabel" />
+
+    <TextView
+        android:text="Pressure: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dewPointLabel"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/dewPointLabel"
+        android:layout_alignStart="@+id/dewPointLabel"
+        android:id="@+id/pressureLabel" />
+
+    <TextView
+        android:text="Clouds: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pressureLabel"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/pressureLabel"
+        android:layout_alignStart="@+id/pressureLabel"
+        android:id="@+id/cloudsLabel" />
+
+    <TextView
+        android:text="Winds: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/cloudsLabel"
+        android:layout_alignLeft="@+id/cloudsLabel"
+        android:layout_alignStart="@+id/cloudsLabel"
+        android:id="@+id/windsLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/feelsLike"
+        android:layout_alignBaseline="@+id/feelsLikeLabel"
+        android:layout_alignBottom="@+id/feelsLikeLabel"
+        android:layout_alignLeft="@+id/mintemp"
+        android:layout_alignStart="@+id/mintemp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/humidityLabel"
+        android:layout_alignLeft="@+id/mintemp"
+        android:layout_alignStart="@+id/mintemp"
+        android:textStyle="bold"
+        android:id="@+id/humidity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:id="@+id/dewPoint"
+        android:layout_alignBaseline="@+id/dewPointLabel"
+        android:layout_alignBottom="@+id/dewPointLabel"
+        android:layout_alignLeft="@+id/mintemp"
+        android:layout_alignStart="@+id/mintemp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/pressureLabel"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/mintemp"
+        android:layout_alignStart="@+id/mintemp"
+        android:id="@+id/pressure" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cloudsLabel"
+        android:layout_alignLeft="@+id/mintemp"
+        android:layout_alignStart="@+id/mintemp"
+        android:textStyle="bold"
+        android:id="@+id/clouds" />
+
+    <TextView
+        android:text="Feels Like: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:id="@+id/feelsLikeLabel"
+        android:layout_below="@+id/minTempLabel"
+        android:layout_alignLeft="@+id/minTempLabel"
+        android:layout_alignStart="@+id/minTempLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/winds"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/windsLabel"
+        android:layout_alignBottom="@+id/windsLabel"
+        android:layout_alignLeft="@+id/mintemp"
+        android:layout_alignStart="@+id/mintemp" />
+
+    <TextView
+        android:text="Max Temperature: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/maxTempLabel"
+        android:layout_below="@+id/conditionText"
+        android:layout_toLeftOf="@+id/maxtemp"
+        android:layout_toStartOf="@+id/maxtemp"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp" />
+
+</RelativeLayout>

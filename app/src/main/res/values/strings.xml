@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="submitButton">Submit</string>
+    <string name="houlyDataLabel">Hourly Data</string>
+    <string name="title_activity_test_basic">testBasic</string>
+    <string name="addToFav">Add to Favorites</string>
+    <string name="noFavorites">There are no cities in your Favorites.</string>
+</resources>
