@@ -5,4 +5,6 @@
     <string name="title_activity_test_basic">testBasic</string>
     <string name="addToFav">Add to Favorites</string>
     <string name="noFavorites">There are no cities in your Favorites.</string>
+    <string name="Favorites">Favorites</string>
+    <string name="NoFav">There is no city in your Favorites</string>
 </resources>

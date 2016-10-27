@@ -45,7 +45,7 @@ public class WeatherAdapter extends ArrayAdapter<Weather> {
 
         Picasso.with(context).load(hours.get(position).iconURL).into(holder.image);    //display weather attributes
         holder.timecondition.setText(hours.get(position).time + "\n" + hours.get(position).climateType);
-        holder.temp.setText(hours.get(position).temperature + " F");
+        holder.temp.setText(hours.get(position).temperature  + (char) 0x00B0 + " F");
 
 
         return convertView;

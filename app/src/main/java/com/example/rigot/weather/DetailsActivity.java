@@ -53,14 +53,14 @@ public class DetailsActivity extends AppCompatActivity {
             }
 
             locationtime.setText("Current Location: " + city + ", " + state + " (" + hourlyWeather.get(index).time + ")");
-            temp.setText(hourlyWeather.get(index).temperature + "F");
+            temp.setText(hourlyWeather.get(index).temperature + (char) 0x00B0 + "F");
             condition.setText(hourlyWeather.get(index).climateType);
             Picasso.with(this).load(hourlyWeather.get(index).iconURL).into(img);
-            maxTemp.setText(max + " F");
-            minTemp.setText(min + " F");
-            feelsLike.setText(hourlyWeather.get(index).feelsLike + " F");
+            maxTemp.setText(Integer.toString(max) + (char) 0x00B0 + " F");
+            minTemp.setText(Integer.toString(min) + (char) 0x00B0 + " F");
+            feelsLike.setText(hourlyWeather.get(index).feelsLike + (char) 0x00B0 + " F");
             humidity.setText(hourlyWeather.get(index).humidity + "%");
-            dewPoint.setText(hourlyWeather.get(index).dewpoint + " F");
+            dewPoint.setText(hourlyWeather.get(index).dewpoint + (char) 0x00B0 + " F");
             pressure.setText(hourlyWeather.get(index).pressure + " hPa");
             clouds.setText(hourlyWeather.get(index).clouds);
             winds.setText(hourlyWeather.get(index).windSpeed + " mph, " + hourlyWeather.get(index).windDirection);

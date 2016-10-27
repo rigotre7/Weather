@@ -35,6 +35,7 @@ public class CityWeather extends AppCompatActivity implements GetWeather.Weather
     String state, city;
     SharedPreferences preferences;
     public static ProgressDialog progDialog;
+    boolean isCity = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,6 +109,13 @@ public class CityWeather extends AppCompatActivity implements GetWeather.Weather
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        if(!isCity){
+            menu.getItem(0).setVisible(false);
+        }
+        return super.onPrepareOptionsMenu(menu);
+    }
 
     @Override
     public void setData(ArrayList<Weather> hours) {
@@ -115,6 +123,7 @@ public class CityWeather extends AppCompatActivity implements GetWeather.Weather
         //get error message, display message to the user and finish activity after 5 seconds
         if(hours==null) {
             Toast.makeText(this, "No cities match your search query", Toast.LENGTH_LONG).show();
+            isCity = false;
             Timer timer = new Timer();
             timer.schedule(new TimerTask() {
                 @Override
@@ -124,6 +133,7 @@ public class CityWeather extends AppCompatActivity implements GetWeather.Weather
             }, 5000);
         }else{
             hourlyWeather = hours;
+            isCity = true;
             location.setText("Current Location: " + city + ", " + state);
             WeatherAdapter adapter = new WeatherAdapter(this, R.layout.row_layout_hourly, hourlyWeather);
             listView.setAdapter(adapter);
@@ -134,7 +144,7 @@ public class CityWeather extends AppCompatActivity implements GetWeather.Weather
     @Override
     public void setProgress() {
 
-        progDialog = ProgressDialog.show(CityWeather.this, "Loading", "Retrieving Weather Info", true);
+        progDialog = ProgressDialog.show(CityWeather.this, "Loading", "Loading Hourly Data", true);
 
     }
 

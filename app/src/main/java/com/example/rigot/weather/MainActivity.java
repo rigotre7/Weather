@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         city = (EditText)findViewById(R.id.cityText);
         state = (EditText)findViewById(R.id.stateText);
         Button submitButton = (Button) findViewById(R.id.submitButton);
+        ListView lv = (ListView)findViewById(R.id.listView);
+        TextView emptyText = (TextView)findViewById(R.id.textViewNoFAv);
+        lv.setEmptyView(emptyText);
         ShowFavorites();
 
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -125,7 +128,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }else{
-            //Toast.makeText(this, "No cities in Favorites List", Toast.LENGTH_LONG).show();
         }
     }
 }
